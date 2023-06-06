@@ -116,7 +116,7 @@ settings:
         enabled: false
         # After how many minutes should a session expire?
         # A player's session ends after the timeout or if his IP has changed
-        timeout: 10
+        timeout: 100000
     # Message language, available languages:
     # https://github.com/AuthMe/AuthMeReloaded/blob/master/docs/translations.md
     messagesLanguage: en
@@ -166,7 +166,7 @@ settings:
             # authentication. The quit location of the player will be overwritten.
             # This is different from "teleportUnAuthedToSpawn" that teleport player
             # to the spawnpoint on join.
-            enabled: false
+            enabled: true
             # WorldNames where we need to force the spawn location
             # Case-sensitive!
             worlds: 
@@ -174,7 +174,7 @@ settings:
             - world_nether
             - world_the_end
         # This option will save the quit location of the players.
-        SaveQuitLocation: false
+        SaveQuitLocation: true
         # To activate the restricted user feature you need
         # to enable this option and configure the AllowedRestrictedUser field.
         AllowRestrictedUser: false
@@ -191,16 +191,16 @@ settings:
         # Should unregistered players be kicked immediately?
         kickNonRegistered: false
         # Should players be kicked on wrong password?
-        kickOnWrongPassword: true
+        kickOnWrongPassword: false
         # Should not logged in players be teleported to the spawn?
         # After the authentication they will be teleported back to
         # their normal position.
-        teleportUnAuthedToSpawn: false
+        teleportUnAuthedToSpawn: true
         # Can unregistered players walk around?
         allowMovement: false
         # After how many seconds should players who fail to login or register
         # be kicked? Set to 0 to disable.
-        timeout: 30
+        timeout: 0
         # Regex pattern of allowed characters in the player name.
         allowedNicknameCharacters: '[a-zA-Z0-9_]*'
         # How far can unregistered players walk?
